@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="secondary" >
+    <ion-title class="ion-text-center" >Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<br>
+<ion-content>
+  <ion-card >
+    <ion-card-content >
+      <ion-item  [routerLink]="['/registro-docentes']"  >
+        Registro de docentes
+      </ion-item>
+      <br>
+      <ion-item  [routerLink]="['/registro-asistencia']"  >
+        Registro de asignaturas
+      </ion-item>
+      <br>
+      <ion-item  [routerLink]="['/lista-docentes']"  >
+        Lista de docentes
+      </ion-item>
+      <br>
+      <ion-item  [routerLink]="['/lista-alumnos']"  >
+        Lista de alumnos
+      </ion-item>
+      <br>
+      <ion-item  [routerLink]="['/lista-clases']"  >
+        Lista de clases
+      </ion-item>
+      <br>
+      
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+      <ion-button slot="end" (click)="logout()">Cerrar sesión</ion-button>
+  </ion-toolbar>
+</ion-footer>

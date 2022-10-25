@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title class="ion-text-center" >Registro de alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="alumnoForm"  (ngSubmit)="guardar()">
+        <ion-item >
+          <ion-label position="floating" >Rut alumno</ion-label>
+          <ion-input formControlName="rut" [(ngModel)]="alumno.rut"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Nombre alumno</ion-label>
+          <ion-input formControlName="nombre" [(ngModel)]="alumno.nombre"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >apellidos alumno</ion-label>
+          <ion-input formControlName="apellidos"[(ngModel)]="alumno.apellidos" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Correo electronico</ion-label>
+          <ion-input formControlName="correo" [(ngModel)]="alumno.correo"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Telefono</ion-label>
+          <ion-input formControlName="telefono" [(ngModel)]="alumno.telefono" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Fecha nacimiento</ion-label>
+          <ion-input formControlName="fecha_nac" type="date" placeholder="Fecha nacimiento" [(ngModel)]="alumno.fecha_nac" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Semestre</ion-label>
+          <ion-input formControlName="semestre" [(ngModel)]="alumno.semestre"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" [(ngModel)]="alumno.password" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label position="floating" >Repetir contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="verificarPass" [ngModelOptions]="{standalone: true}" ></ion-input>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!alumnoForm.valid">REGISTRAR</ion-button>
+        <ion-button (click) =limpiar()>Limpiar</ion-button>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

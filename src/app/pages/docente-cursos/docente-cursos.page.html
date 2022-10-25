@@ -1,0 +1,17 @@
+<ion-list *ngFor="let c of clases" [routerLink]="['/qr', c.id]">
+  <ion-slide *ngIf="c.rutProfe === usuario.rut">
+    <div>
+      <ion-card >
+        <ion-item>
+          <p>Clase: {{c.nombre}} </p>
+        </ion-item>
+        <ion-item>
+          <p>Sigla: {{c.sigla}}</p>
+        </ion-item>
+        <ion-item>
+          <p>ID: {{c.id}}</p>
+        </ion-item>
+    </ion-card>
+    </div>
+  </ion-slide>
+</ion-list>

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="secondary" >
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/admin-page']">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" > Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Alumnos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list *ngFor="let alu of alumnos" [routerLink]="['/perfil-usuario', alu.id]">
+        <ion-slide *ngIf="alu.usuario === 'alumno'">
+          <ion-label>
+            {{upper(alu.nombre)}} {{upper(alu.apellidos)}}
+            </ion-label>
+        </ion-slide>
+      </ion-list>
+    </ion-card-content>
+
+
+
+
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="end">
+      <ion-button>
+        algo
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

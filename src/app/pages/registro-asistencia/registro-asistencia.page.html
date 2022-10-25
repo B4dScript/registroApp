@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="secondary" >
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/admin-page']">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" >Registro Asignaturas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+
+
+
+<ion-content>
+
+  <ion-card>    
+    <ion-item>
+      <ion-label position="floating">Nombre Clase</ion-label>
+      <ion-input [(ngModel)]="clase.nombre" type="text" placeholder="ingrese nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Sigla clase</ion-label>
+      <ion-input [(ngModel)]="clase.sigla" type="text" placeholder="ingrese nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Rut Profesor</ion-label>
+      <ion-input [(ngModel)]="clase.rutProfe" type="text" placeholder="ingrese rut del docente"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Sala</ion-label>
+      <ion-input [(ngModel)]="clase.sala" type="text" placeholder="ingrese sala de clases"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="guardarClase()" expand="full">Registrar</ion-button>
+    
+  </ion-card>
+
+  
+</ion-content>

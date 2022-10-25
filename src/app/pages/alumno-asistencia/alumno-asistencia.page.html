@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-card>
+
+    <ion-item>
+      <ion-icon name="qr-code-outline" slot="start"></ion-icon>
+      <ion-label>Registra tu clase actual </ion-label>
+    </ion-item>
+    
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" >Ingresa codigo</ion-label>
+        <ion-input  [(ngModel)]="codigo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button fill="outline"(click)="registrarClase()" >
+          Registrar
+        </ion-button>
+        <ion-button fill="outline" slot="end">Escaneo QR</ion-button>
+      </ion-item>
+  
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+

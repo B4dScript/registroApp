@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="secondary" >
+    <ion-title class="ion-text-center" >Iniciar sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content class="body">
+  <ion-card color="secondary">
+    <ion-card-header>
+      <ion-card-title>Iniciar sesion</ion-card-title>
+      <img src="\assets\logo.png">
+    </ion-card-header>
+    <ion-card-content>
+      
+        <ion-item >
+          <ion-label position="floating" >Correo</ion-label>
+          <ion-input  [(ngModel)]="correo"></ion-input>
+        </ion-item>
+        
+        <ion-item >
+          <ion-label position="floating" >Password</ion-label>
+          <ion-input  type="password" [(ngModel)]="password" ></ion-input>
+        </ion-item>
+      
+      <ion-button color="secondary" (click)="login()" >
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/recuperar-password']">
+        Recuperar
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">
+        Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
